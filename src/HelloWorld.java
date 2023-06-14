@@ -1,3 +1,4 @@
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -13,6 +14,10 @@ public class HelloWorld {
         float myNumber = 314;
         System.out.println(myNumber);
 
+        double hisNumber = 3.14;
+
+        System.out.println("hisNumber = " + hisNumber);
+
 //        int x = 5;
 //        System.out.println(x++);
 //        System.out.println(x);
@@ -23,6 +28,7 @@ public class HelloWorld {
 
 
 //        String theNumberThree = "three";
+//        int theNumberThree = 3;
 //        Object o = theNumberThree;
 //        int three = (int) o;
 //        System.out.println(theNumberThree);
@@ -46,5 +52,9 @@ public class HelloWorld {
         System.out.println(y);
 
 
+//        byte myByte = 127;
+//        System.out.println("myByte = " + myByte;
+
+//        myByte++;
     }
 }
