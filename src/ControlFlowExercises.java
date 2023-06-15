@@ -83,7 +83,7 @@ public class ControlFlowExercises {
 
         System.out.println("Goodbye!");
 
-        String choice;
+//        String choice;
 
         do {
             System.out.print("Enter a numerical grade (0-100): ");
