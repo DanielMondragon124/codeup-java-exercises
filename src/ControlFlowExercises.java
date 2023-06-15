@@ -8,47 +8,52 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 //        System.out.println();
-//        Do-while loop (counting by 2's
+////        Do-while loop (counting by 2's
 //        int num1 = 0;
 //        do {
 //            System.out.println(num1);
 //            num1 += 2;
 //        } while (num1 <= 100);
-
-        // Do-While Loop (Counting backwards by 5's)
+//
+////         Do-While Loop (Counting backwards by 5's)
 //        int num2 = 100;
 //        do {
 //            System.out.println(num2);
 //            num2 -= 5;
 //        } while (num2 >= -10);
-
-        // Do-While Loop (Number squared)
+//
+////         Do-While Loop (Number squared)
 //        int num3 = 2;
 //        do {
 //            System.out.println(num3);
 //            num3 *= num3;
 //        } while (num3 < 1000);
-
-        // For Loop (Counting by 1's)
+//
+////         For Loop (Counting by 1's)
 //        for (int j = 5; j <= 15; j++) {
 //            System.out.print(j + " ");
 //        }
 //        System.out.println();
-
-        // For Loop (Counting by 2's)
+//
+////         For Loop (Counting by 2's)
 //        for (int k = 0; k <= 100; k += 2) {
 //            System.out.println(k);
 //        }
-
-        // For Loop (Counting backwards by 5's)
+//
+////         For Loop (Counting backwards by 5's)
 //        for (int l = 100; l >= -10; l -= 5) {
 //            System.out.println(l);
 //        }
-
-        // For Loop (Number squared)
+//
+////         For Loop (Number squared)
 //        for (int num = 2; num < 1000; num *= num) {
 //            System.out.println(num);
 //        }
+
+
+
+
+
         for (int i = 1; i <= 100; i++) {
             if(i % 3 == 0 && i % 5 == 0) {
                 System.out.println("FizzBuzz");
