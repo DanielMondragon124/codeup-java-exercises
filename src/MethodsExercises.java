@@ -52,7 +52,33 @@ public static void main(String[] args) {
     System.out.println("You're welcome!");
 
 
+//    Scanner scanner = new Scanner(System.in);
 
+    System.out.print("Enter the number of sides for a pair of dice: ");
+    int sides = scanner.nextInt();
+    scanner.nextLine(); // Consume the newline character
+
+    boolean rollAgain = true;
+
+    while (rollAgain) {
+        int dice1 = rollDice(sides);
+        int dice2 = rollDice(sides);
+
+        System.out.printf("Dice 1: %d%n", dice1);
+        System.out.printf("Dice 2: %d%n", dice2);
+
+        System.out.print("Roll again? (y/n): ");
+        String choice1 = scanner.nextLine();
+
+        rollAgain = choice1.equalsIgnoreCase("y");
+    }
+
+    System.out.println("Thank you for playing!");
+    scanner.close();
+}
+
+    public static int rollDice(int sides) {
+        return (int) (Math.random() * sides) + 1;
 
 
 }
@@ -90,5 +116,10 @@ public static void main(String[] args) {
         }
         System.out.println("Took you long enough geez....");
         return input;
+
+
+
+
     }
+
 }
