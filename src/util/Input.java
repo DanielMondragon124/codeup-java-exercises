@@ -9,12 +9,12 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
-    public String getString() {
+    public static String getString(String s) {
         return scanner.nextLine();
     }
 
     public boolean yesNo() {
-        String input = getString();
+        String input = getString("What student would you like to see more information on?");
         return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
     }
 
