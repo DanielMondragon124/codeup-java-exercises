@@ -3,77 +3,80 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    private static Scanner scanner;
 
     public Input() {
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
-    public static String getString(String s) {
+    public static String getString() {
         return scanner.nextLine();
     }
 
     public boolean yesNo() {
-        String input = getString("What student would you like to see more information on?");
+        String input = getString();
         return input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes");
     }
 
     public int getInt(int min, int max) {
-        int num;
+        int num = 0;
         do {
             System.out.printf("Enter an integer between %d and %d: ", min, max);
-            while (!scanner.hasNextInt()) {
+            try {
+                num = Integer.valueOf(getString());
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter an integer.");
-                scanner.next();
+                continue;
             }
-            num = scanner.nextInt();
         } while (num < min || num > max);
-        scanner.nextLine();
         return num;
     }
 
     public int getInt() {
         System.out.print("Enter an integer: ");
-        while (!scanner.hasNextInt()) {
+        try {
+            return Integer.valueOf(getString());
+        } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter an integer.");
-            scanner.next();
+            return getInt();
         }
-        int num = scanner.nextInt();
-        scanner.nextLine();
-        return num;
     }
 
     public double getDouble(double min, double max) {
-        double num;
+        double num = 0;
         do {
             System.out.printf("Enter a decimal number between %.2f and %.2f: ", min, max);
-            while (!scanner.hasNextDouble()) {
+            try {
+                num = Double.valueOf(getString());
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a decimal number.");
-                scanner.next();
+                continue;
             }
-            num = scanner.nextDouble();
         } while (num < min || num > max);
-        scanner.nextLine();
         return num;
     }
 
     public double getDouble() {
         System.out.print("Enter a decimal number: ");
-        while (!scanner.hasNextDouble()) {
+        try {
+            return Double.valueOf(getString());
+        } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a decimal number.");
-            scanner.next();
+            return getDouble();
         }
-        double num = scanner.nextDouble();
-        scanner.nextLine();
-        return num;
     }
+
     public double getDouble(String prompt) {
         System.out.print(prompt);
-        return scanner.nextDouble();
+        try {
+            return Double.valueOf(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a decimal number.");
+            return getDouble(prompt);
+        }
     }
 
     public void close() {
         scanner.close();
     }
 }
-

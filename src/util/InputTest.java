@@ -5,7 +5,7 @@ public class InputTest {
         Input input = new Input();
 
         System.out.print("Enter a string: ");
-        String str = input.getString("What student would you like to see more information on?");
+        String str = input.getString();
         System.out.println("You entered: " + str);
 
         System.out.print("Enter yes or no: ");

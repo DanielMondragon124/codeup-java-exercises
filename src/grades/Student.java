@@ -19,17 +19,21 @@ public class Student {
         grades.add(grade);
     }
 
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
+
     public double getGradeAverage() {
         if (grades.isEmpty()) {
-            return 0.0;
+            return 0;
         }
 
-        int sum = 0;
-        for (int grade : grades) {
+        double sum = 0;
+
+        for (double grade : grades) {
             sum += grade;
         }
 
-        return (double) sum / grades.size();
+        return sum / grades.size();
     }
 }
-
